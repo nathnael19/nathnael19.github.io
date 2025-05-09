@@ -66,10 +66,14 @@
                 </div>
                 <div class="about-text">
                     <h3>Who am I?</h3>
-                    <p>I'm a passionate Frontend Developer based in New York with 5 years of experience creating
-                        beautiful, functional, and user-centered digital experiences.</p>
-                    <p>I enjoy turning complex problems into simple, beautiful and intuitive designs. When I'm not
-                        coding or pushing pixels, you'll find me cooking, gardening or exploring the outdoors.</p>
+                    <p>I'm a passionate Full-Stack Developer and Mobile App Developer based in Addis Abeba, Ethiopia.
+                        With over 2 years of
+                        experience, I specialize in building responsive and efficient web and mobile applications.</p>
+                    <p>I love creating solutions that are both user-friendly and technically sound. When I'm not coding,
+                        you can find me
+                        exploring new technologies, working on personal projects, or enjoying a good cup of coffee.</p>
+                    <p>My goal is to continuously learn and grow in the field of technology, and to contribute to
+                        meaningful projects that make a difference.</p>
                     <div class="about-details">
                         <div class="detail">
                             <i class="fas fa-user"></i>
@@ -212,7 +216,6 @@
             </div>
         </div>
     </section>
-
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
@@ -225,7 +228,8 @@
             <div class="projects-grid">
                 <div class="project-card" data-category="web">
                     <div class="project-img">
-                        <img src="/placeholder.svg?height=300&width=500" alt="E-commerce Website">
+                        <!-- Image from an online resource (example: E-commerce website) -->
+                        <img src="https://via.placeholder.com/500x300?text=E-commerce+Website" alt="E-commerce Website">
                     </div>
                     <div class="project-content">
                         <h3>E-commerce Website</h3>
@@ -243,7 +247,8 @@
                 </div>
                 <div class="project-card" data-category="app">
                     <div class="project-img">
-                        <img src="/placeholder.svg?height=300&width=500" alt="Weather App">
+                        <!-- Image from an online resource (example: Weather app) -->
+                        <img src="https://via.placeholder.com/500x300?text=Weather+App" alt="Weather App">
                     </div>
                     <div class="project-content">
                         <h3>Weather App</h3>
@@ -262,7 +267,8 @@
                 </div>
                 <div class="project-card" data-category="design">
                     <div class="project-img">
-                        <img src="/placeholder.svg?height=300&width=500" alt="Portfolio Design">
+                        <!-- Image from an online resource (example: Portfolio design) -->
+                        <img src="https://via.placeholder.com/500x300?text=Portfolio+Design" alt="Portfolio Design">
                     </div>
                     <div class="project-content">
                         <h3>Portfolio Design</h3>
@@ -270,29 +276,9 @@
                         <div class="project-tags">
                             <span>Figma</span>
                             <span>UI/UX</span>
-                            <span>Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn small">Demo</a>
-                            <a href="#" class="btn small secondary">Case Study</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <img src="/placeholder.svg?height=300&width=500" alt="Task Manager">
-                    </div>
-                    <div class="project-content">
-                        <h3>Task Manager</h3>
-                        <p>A task management application with drag-and-drop functionality and local storage.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small">Demo</a>
-                            <a href="#" class="btn small secondary">Code</a>
+                            <a href="#" class="btn small">View Design</a>
                         </div>
                     </div>
                 </div>
@@ -341,18 +327,19 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <!-- Add the Formspree action URL and method -->
+                    <form id="contactForm" action="https://formspree.io/f/xwpoqvgv" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn primary">Send Message</button>
                     </form>
@@ -360,6 +347,8 @@
             </div>
         </div>
     </section>
+
+
 
     <footer>
         <div class="container">
