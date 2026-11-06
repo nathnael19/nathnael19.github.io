@@ -1,360 +1,710 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nathnael Nigussie | Portfolio</title>
+    <title>Nathnael Nigussie — Full-Stack & Mobile Developer | Bulbula Partner</title>
+    <meta name="description" content="Personal portfolio of Nathnael Nigussie — Senior Full-Stack & Mobile Developer and Co-founder at Bulbula Software Solutions. Crafting fast web and mobile products.">
+    <meta name="theme-color" content="#0c0a09">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons & Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Top notification toast -->
+    <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+    <!-- Navigation Header -->
     <header>
-        <div class="container">
-            <div class="logo">N</div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </div>
-                <div class="hamburger">
+        <nav class="nav-container" aria-label="Main Navigation">
+            <a href="#top" class="brand-link" aria-label="Nathnael Nigussie">
+                <span class="brand-avatar">
+                    <img src="assets/pp.jpg" alt="Nathnael" width="34" height="34">
+                </span>
+                <span class="brand-name">
+                    Nathnael<span class="text-gold">.</span>
+                </span>
+            </a>
+
+            <div class="desktop-menu">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#process" class="nav-link">Process</a>
+                <a href="#stack" class="nav-link">Stack</a>
+                <a href="#estimator" class="nav-link">Estimator</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+
+            <div class="nav-right">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary nav-cta">Start a Project</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
-            </nav>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Dropdown -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#work" class="mobile-link">Work</a>
+            <a href="#process" class="mobile-link">Process</a>
+            <a href="#stack" class="mobile-link">Stack</a>
+            <a href="#estimator" class="mobile-link">Estimator</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#contact" class="mobile-link mobile-cta">Start a Project</a>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Hi, I'm <span class="highlight">Nathnael Nigussie</span></h1>
-                <h2>Full-Stack Developer and Mobile App Developer</h2>
-                <p>I build exceptional digital experiences that live at the intersection of design and technology.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary">View My Work</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+    <main id="top">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-ambient" aria-hidden="true"></div>
+            <div class="container hero-container">
+                <div class="hero-badge">
+                    <span class="status-indicator"></span>
+                    <span>Senior Full-Stack & Mobile Developer · Partner at <a href="https://bulbula.webcode.codes/" target="_blank" rel="noopener noreferrer" class="badge-link">Bulbula</a></span>
                 </div>
-                <div class="social-icons">
-                    <a href="https://www.github.com/nathnael19" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://t.me/Nhttey" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                    <a href="https://www.instagram.com/nhttey19" aria-label="Instagram"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="blob"></div>
-                <img src="assets/pp.jpg" width="400" height="400" alt="Nathnael Nigussie">
-            </div>
-        </div>
-    </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/pp.jpg" width="400" height="400" alt="About Nathnael Nigussie">
-                </div>
-                <div class="about-text">
-                    <h3>Who am I?</h3>
-                    <p>I'm a passionate Full-Stack Developer and Mobile App Developer based in Addis Abeba, Ethiopia.
-                        With over 2 years of
-                        experience, I specialize in building responsive and efficient web and mobile applications.</p>
-                    <p>I love creating solutions that are both user-friendly and technically sound. When I'm not coding,
-                        you can find me
-                        exploring new technologies, working on personal projects, or enjoying a good cup of coffee.</p>
-                    <p>My goal is to continuously learn and grow in the field of technology, and to contribute to
-                        meaningful projects that make a difference.</p>
-                    <div class="about-details">
-                        <div class="detail">
-                            <i class="fas fa-user"></i>
-                            <div>
-                                <h4>Name</h4>
-                                <p>Nathnael Nigussie</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>nathanelnigussie19@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Addis Abeba, Ethiopia</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <i class="fas fa-calendar-alt"></i>
-                            <div>
-                                <h4>Experience</h4>
-                                <p>2+ Years</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#" class="btn primary">Download CV</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                <h1 class="hero-title">
+                    Building software <br class="hidden-xs">
+                    that <span class="shimmer-gold">ships.</span>
+                </h1>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
-                            <h4>HTML5</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
-                            <h4>CSS3</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-js"></i></div>
-                            <h4>JavaScript</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-react"></i></div>
-                            <h4>React</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                    </div>
+                <p class="hero-subtitle">
+                    Hi, I'm Nathnael Nigussie. I craft production-ready web apps, scalable mobile applications, and backend systems for ambitious founders and enterprises — without unnecessary agency overhead.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        Start a project <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#work" class="btn btn-secondary btn-lg">
+                        Explore portfolio
+                    </a>
                 </div>
-                <div class="skill-category">
-                    <h3>Design</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
-                            <h4>Figma</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                            <h4>UI/UX</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
-                            <h4>Wireframing</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-photo-video"></i></div>
-                            <h4>Photoshop</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 70%"></div>
-                            </div>
-                        </div>
+
+                <!-- Proof Stats Bar -->
+                <div class="stats-card">
+                    <div class="stat-item">
+                        <span class="stat-value">20+</span>
+                        <span class="stat-desc">Products Shipped</span>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Mobile App</h3>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fab fa-figma"></i></div>
-                            <h4>Flutter</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-palette"></i></div>
-                            <h4>React-Native</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
-                            <h4>Java</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon"><i class="fas fa-photo-video"></i></div>
-                            <h4>Swift</h4>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 70%"></div>
-                            </div>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-value">2+</span>
+                        <span class="stat-desc">Years in Studio</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">100%</span>
+                        <span class="stat-desc">Hands-on, no hand-offs</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">0</span>
+                        <span class="stat-desc">Middlemen</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="app">App</button>
-                <button class="filter-btn" data-filter="design">Design</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-img">
-                        <!-- Image from an online resource (example: E-commerce website) -->
-                        <img src="https://via.placeholder.com/500x300?text=E-commerce+Website" alt="E-commerce Website">
-                    </div>
-                    <div class="project-content">
-                        <h3>E-commerce Website</h3>
-                        <p>A fully responsive e-commerce platform with product filtering and cart functionality.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small">Demo</a>
-                            <a href="#" class="btn small secondary">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="app">
-                    <div class="project-img">
-                        <!-- Image from an online resource (example: Weather app) -->
-                        <img src="https://via.placeholder.com/500x300?text=Weather+App" alt="Weather App">
-                    </div>
-                    <div class="project-content">
-                        <h3>Weather App</h3>
-                        <p>A weather application that displays current weather and forecasts based on location.</p>
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small">Demo</a>
-                            <a href="#" class="btn small secondary">Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="design">
-                    <div class="project-img">
-                        <!-- Image from an online resource (example: Portfolio design) -->
-                        <img src="https://via.placeholder.com/500x300?text=Portfolio+Design" alt="Portfolio Design">
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Design</h3>
-                        <p>A modern portfolio design concept created for a photography client.</p>
-                        <div class="project-tags">
-                            <span>Figma</span>
-                            <span>UI/UX</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small">View Design</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="details">
-                            <h3>Location</h3>
-                            <p>Addis Abeba ,Ethiopia</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="details">
-                            <h3>Email</h3>
-                            <p><a href="mailto:nathanelnigussie19@gmail.com">nathanelnigussie19@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="details">
-                            <h3>Phone</h3>
-                            <p>+251919933640</p>
-                        </div>
-                    </div>
-                    <div class="social-icons">
-                        <a href="https://www.github.com/nathnael19" aria-label="GitHub"><i
-                                class="fab fa-github"></i></a>
-                        <a href="https://t.me/Nhttey" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-                        <a href="https://www.instagram.com/nhttey19" aria-label="Instagram"><i
-                                class="fab fa-instagram"></i></a>
-                    </div>
+        <!-- Services Section -->
+        <section id="services" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">What I do</span>
+                    <h2 class="title">One engineer, the whole stack.</h2>
+                    <p class="subtitle">From the initial prototype to deployment and monitoring — you work directly with the person writing the code.</p>
                 </div>
-                <div class="contact-form">
-                    <!-- Add the Formspree action URL and method -->
-                    <form id="contactForm" action="https://formspree.io/f/xwpoqvgv" method="POST">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon"><i class="fas fa-code"></i></span>
+                            <span class="service-index">01</span>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <h3>Web Development</h3>
+                        <p>Production-grade web apps, interactive dashboards, and SaaS platforms built with React, Next.js, and modern tooling — fast, accessible, and scalable.</p>
+                        <ul class="service-bullets">
+                            <li><i class="fas fa-check"></i> React / Next.js architecture</li>
+                            <li><i class="fas fa-check"></i> Dashboards & SaaS platforms</li>
+                            <li><i class="fas fa-check"></i> REST & GraphQL integrations</li>
+                            <li><i class="fas fa-check"></i> Performance & SEO optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon"><i class="fas fa-mobile-screen"></i></span>
+                            <span class="service-index">02</span>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <h3>Mobile Apps</h3>
+                        <p>Cross-platform iOS and Android apps built with Flutter and React Native. Smooth 60fps animations, intuitive native gestures, and offline-first capabilities.</p>
+                        <ul class="service-bullets">
+                            <li><i class="fas fa-check"></i> Flutter & React Native apps</li>
+                            <li><i class="fas fa-check"></i> App Store & Play Store delivery</li>
+                            <li><i class="fas fa-check"></i> Push notifications & background sync</li>
+                            <li><i class="fas fa-check"></i> Offline storage & device caching</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon"><i class="fas fa-server"></i></span>
+                            <span class="service-index">03</span>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <h3>Backend & APIs</h3>
+                        <p>Robust APIs, databases, and scalable cloud backends. Rock-solid authentication, clean relational data models, and systems that stay reliable under peak traffic.</p>
+                        <ul class="service-bullets">
+                            <li><i class="fas fa-check"></i> Node.js, Express & FastAPI</li>
+                            <li><i class="fas fa-check"></i> PostgreSQL & Supabase</li>
+                            <li><i class="fas fa-check"></i> Cloud deployment (AWS / Docker)</li>
+                            <li><i class="fas fa-check"></i> Role-based access & auth security</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-header">
+                            <span class="service-icon"><i class="fas fa-palette"></i></span>
+                            <span class="service-index">04</span>
                         </div>
-                        <button type="submit" class="btn primary">Send Message</button>
-                    </form>
+                        <h3>UI/UX & Design Systems</h3>
+                        <p>Interface design that looks polished and converts visitors into loyal users. Design systems, interactive prototypes, and pixel-perfect translation to code.</p>
+                        <ul class="service-bullets">
+                            <li><i class="fas fa-check"></i> Figma component libraries</li>
+                            <li><i class="fas fa-check"></i> Responsive design systems</li>
+                            <li><i class="fas fa-check"></i> Micro-interactions & animations</li>
+                            <li><i class="fas fa-check"></i> Wireframing & user journeys</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Selected Work Section -->
+        <section id="work" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Selected Work</span>
+                    <h2 class="title">Proven software delivered to real users.</h2>
+                    <p class="subtitle">A curation of live client products, marketplaces, and systems built individually and with the Bulbula studio.</p>
+                </div>
 
+                <div class="work-grid">
+                    <!-- Project 1: Civora -->
+                    <article class="work-card">
+                        <div class="work-media">
+                            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?w=900&h=540&fit=crop" alt="Civora marketplace" loading="lazy">
+                            <span class="work-badge">Marketplace · Web App</span>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-meta">
+                                <h3>Civora Construction</h3>
+                                <span class="work-year">2025</span>
+                            </div>
+                            <p>Ethiopia's digital construction marketplace connecting contractors with verified material suppliers — featuring blind-bid quotes, escrow payments via Telebirr and banks, and real-time tracking.</p>
+                            <div class="work-tags">
+                                <span>Next.js</span>
+                                <span>Telebirr</span>
+                                <span>Escrow</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="work-foot">
+                                <a href="https://civoraconstruction.com" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                                    Visit Website <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
 
+                    <!-- Project 2: Ethiopian Calendar -->
+                    <article class="work-card">
+                        <div class="work-media">
+                            <img src="https://images.unsplash.com/photo-1506784365847-bbad939e9335?w=900&h=540&fit=crop" alt="Ethiopian Calendar App" loading="lazy">
+                            <span class="work-badge">Mobile · App Store</span>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-meta">
+                                <h3>Ethiopian Calendar App</h3>
+                                <span class="work-year">2026</span>
+                            </div>
+                            <p>An intuitive mobile app for the Ethiopian Calendar featuring Gregorian-to-Geez date conversion, national holiday notifications, and local event scheduling for thousands of daily users.</p>
+                            <div class="work-tags">
+                                <span>Flutter</span>
+                                <span>Dart</span>
+                                <span>Android</span>
+                                <span>Offline First</span>
+                            </div>
+                            <div class="work-foot">
+                                <a href="https://play.google.com/store/apps/details?id=com.nathnael19.calendar" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                                    Google Play Store <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: ASTU Library -->
+                    <article class="work-card">
+                        <div class="work-media">
+                            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=900&h=540&fit=crop" alt="ASTU Library system" loading="lazy">
+                            <span class="work-badge">Education · Web System</span>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-meta">
+                                <h3>ASTU Library System</h3>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <p>A desktop pooling and digital resource system built for Adama Science and Technology University Library to streamline physical book reservations and computer workstation allocation.</p>
+                            <div class="work-tags">
+                                <span>React</span>
+                                <span>System Design</span>
+                                <span>Education</span>
+                                <span>REST</span>
+                            </div>
+                            <div class="work-foot">
+                                <a href="https://astulibrary.netlify.app/" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                                    View System <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: HKB Construction -->
+                    <article class="work-card">
+                        <div class="work-media">
+                            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&h=540&fit=crop" alt="HKB Construction platform" loading="lazy">
+                            <span class="work-badge">Corporate · Web App</span>
+                        </div>
+                        <div class="work-body">
+                            <div class="work-meta">
+                                <h3>HKB Construction PLC</h3>
+                                <span class="work-year">2024</span>
+                            </div>
+                            <p>Digital presence and project portfolio for HKB Construction PLC, highlighting major road infrastructure, water supply works, and drilling projects across East Africa.</p>
+                            <div class="work-tags">
+                                <span>React</span>
+                                <span>Web Design</span>
+                                <span>Infrastructure</span>
+                            </div>
+                            <div class="work-foot">
+                                <a href="https://hkbconstractionplc.netlify.app/" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                                    Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">How we work</span>
+                    <h2 class="title">Clear milestones. No surprises.</h2>
+                    <p class="subtitle">A proven 4-step delivery pipeline built to take an idea from napkin sketch to production.</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-num">01</div>
+                        <h3>Discover</h3>
+                        <p>We start with your core problem, user personas, and technical constraints — then map the leanest prototype worth building first.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-num">02</div>
+                        <h3>Design</h3>
+                        <p>Wireframes to high-fidelity UI in Figma. You interact with and approve the interface before writing a single line of production code.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-num">03</div>
+                        <h3>Build</h3>
+                        <p>Short development cycles with testable builds every week. Clean component architecture, automated tests, and clear changelogs.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-num">04</div>
+                        <h3>Ship & Support</h3>
+                        <p>We deploy to stores or cloud infrastructure, test under real conditions, and stay on board. Launch is the beginning, not the end.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Tooling & Stack</span>
+                    <h2 class="title">Reliable, modern engineering.</h2>
+                    <p class="subtitle">Tools chosen for developer velocity, stability under load, and long-term maintainability.</p>
+                </div>
+
+                <div class="stack-cloud">
+                    <div class="stack-badge"><i class="fab fa-react"></i> React</div>
+                    <div class="stack-badge"><i class="fas fa-n"></i> Next.js</div>
+                    <div class="stack-badge"><i class="fab fa-js"></i> TypeScript</div>
+                    <div class="stack-badge"><i class="fas fa-mobile-alt"></i> Flutter</div>
+                    <div class="stack-badge"><i class="fab fa-react"></i> React Native</div>
+                    <div class="stack-badge"><i class="fab fa-node-js"></i> Node.js</div>
+                    <div class="stack-badge"><i class="fas fa-database"></i> PostgreSQL</div>
+                    <div class="stack-badge"><i class="fas fa-bolt"></i> Supabase</div>
+                    <div class="stack-badge"><i class="fab fa-css3-alt"></i> Tailwind CSS</div>
+                    <div class="stack-badge"><i class="fas fa-network-wired"></i> GraphQL</div>
+                    <div class="stack-badge"><i class="fab fa-aws"></i> AWS Cloud</div>
+                    <div class="stack-badge"><i class="fab fa-figma"></i> Figma</div>
+                    <div class="stack-badge"><i class="fab fa-docker"></i> Docker</div>
+                    <div class="stack-badge"><i class="fab fa-git-alt"></i> Git & GitHub</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Project Estimator (Bulbula Signature) -->
+        <section id="estimator" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Interactive Estimator</span>
+                    <h2 class="title">Estimate your project cost in seconds.</h2>
+                    <p class="subtitle">Select your scope, features, and target schedule for a transparent price range in Ethiopian Birr (ETB).</p>
+                </div>
+
+                <div class="estimator-layout">
+                    <!-- Controls -->
+                    <div class="estimator-controls">
+                        <!-- Step 1: Project Type -->
+                        <div class="est-group">
+                            <label class="est-label">1. Select Project Type</label>
+                            <div class="est-cards" id="projectTypeGroup">
+                                <button type="button" class="est-card active" data-type="web" data-base="40000" data-days="30">
+                                    <div class="est-card-top">
+                                        <i class="fas fa-globe"></i>
+                                        <strong>Web Application</strong>
+                                    </div>
+                                    <span>SaaS, Dashboards, Custom Web Platforms</span>
+                                </button>
+                                <button type="button" class="est-card" data-type="mobile" data-base="50000" data-days="40">
+                                    <div class="est-card-top">
+                                        <i class="fas fa-mobile-screen"></i>
+                                        <strong>Mobile App</strong>
+                                    </div>
+                                    <span>iOS & Android (Flutter / React Native)</span>
+                                </button>
+                                <button type="button" class="est-card" data-type="both" data-base="100000" data-days="60">
+                                    <div class="est-card-top">
+                                        <i class="fas fa-layer-group"></i>
+                                        <strong>Web & Mobile Suite</strong>
+                                    </div>
+                                    <span>Unified codebase & shared backend</span>
+                                </button>
+                                <button type="button" class="est-card" data-type="website" data-base="30000" data-days="15">
+                                    <div class="est-card-top">
+                                        <i class="fas fa-desktop"></i>
+                                        <strong>Marketing Website</strong>
+                                    </div>
+                                    <span>High-converting marketing & CMS site</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Features -->
+                        <div class="est-group">
+                            <label class="est-label">2. Add Core Features</label>
+                            <div class="est-features" id="featuresGroup">
+                                <label class="feature-checkbox">
+                                    <input type="checkbox" value="auth" data-price="12000" data-days="7">
+                                    <div class="feature-info">
+                                        <strong>User Accounts & Roles</strong>
+                                        <span>Secure signup, login, permission levels</span>
+                                    </div>
+                                    <span class="feature-cost">+12,000 Br</span>
+                                </label>
+                                <label class="feature-checkbox">
+                                    <input type="checkbox" value="payments" data-price="9000" data-days="5">
+                                    <div class="feature-info">
+                                        <strong>Payments & Telebirr / Stripe</strong>
+                                        <span>Checkout, mobile wallets, invoices</span>
+                                    </div>
+                                    <span class="feature-cost">+9,000 Br</span>
+                                </label>
+                                <label class="feature-checkbox">
+                                    <input type="checkbox" value="realtime" data-price="11000" data-days="10">
+                                    <div class="feature-info">
+                                        <strong>Real-Time Features</strong>
+                                        <span>Live chat, alerts, collaborative sync</span>
+                                    </div>
+                                    <span class="feature-cost">+11,000 Br</span>
+                                </label>
+                                <label class="feature-checkbox">
+                                    <input type="checkbox" value="cms" data-price="10000" data-days="5">
+                                    <div class="feature-info">
+                                        <strong>Custom CMS & Content Portal</strong>
+                                        <span>Admin publishing tools for blog and media</span>
+                                    </div>
+                                    <span class="feature-cost">+10,000 Br</span>
+                                </label>
+                                <label class="feature-checkbox">
+                                    <input type="checkbox" value="admin" data-price="15000" data-days="8">
+                                    <div class="feature-info">
+                                        <strong>Analytics & Admin Dashboard</strong>
+                                        <span>Telemetry, user metrics, and control panel</span>
+                                    </div>
+                                    <span class="feature-cost">+15,000 Br</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Pace -->
+                        <div class="est-group">
+                            <label class="est-label">3. Timeline Pace</label>
+                            <div class="est-pace" id="paceGroup">
+                                <button type="button" class="pace-btn active" data-pace="standard" data-multiplier="1" data-timemult="1">
+                                    <strong>Standard Timeline</strong>
+                                    <span>Regular production sprint</span>
+                                </button>
+                                <button type="button" class="pace-btn" data-pace="rush" data-multiplier="1.3" data-timemult="0.75">
+                                    <strong>Accelerated Delivery</strong>
+                                    <span>Priority queueing & extra sprint hours</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary Card -->
+                    <div class="estimator-summary">
+                        <div class="summary-box">
+                            <div class="summary-section">
+                                <span class="summary-tag">Project Budget Range</span>
+                                <div class="price-display">
+                                    <span id="priceMin">40,000</span> Br
+                                    <span class="price-separator">—</span>
+                                    <span id="priceMax">48,000</span> Br
+                                </div>
+                                <span class="summary-note">ETB, estimated fixed price based on selections above.</span>
+                            </div>
+
+                            <div class="summary-section border-top">
+                                <span class="summary-tag">Estimated Delivery Timeline</span>
+                                <div class="time-display">
+                                    <span id="weeksMin">4</span>
+                                    <span class="price-separator">—</span>
+                                    <span id="weeksMax">6</span> weeks
+                                </div>
+                                <span class="summary-note">From kickoff workshop to store / web release.</span>
+                            </div>
+
+                            <div class="summary-section border-top">
+                                <span class="summary-tag">What's Included</span>
+                                <ul class="summary-perks">
+                                    <li><i class="fas fa-check text-gold"></i> Direct engineer collaboration (Nathnael)</li>
+                                    <li><i class="fas fa-check text-gold"></i> Weekly staging preview URLs</li>
+                                    <li><i class="fas fa-check text-gold"></i> Complete source code ownership</li>
+                                    <li><i class="fas fa-check text-gold"></i> 30-day post-launch bug warranty</li>
+                                </ul>
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-block" id="useEstimateBtn">
+                                Use this estimate in inquiry <i class="fas fa-arrow-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me & Studio Section -->
+        <section id="about" class="section-block">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-photo-wrapper">
+                        <div class="photo-frame">
+                            <img src="assets/pp.jpg" alt="Nathnael Nigussie" width="440" height="440" class="portrait-img">
+                            <div class="studio-badge">
+                                <span class="studio-logo">B.</span>
+                                <div>
+                                    <strong>Bulbula Software Solutions</strong>
+                                    <span>Co-founder & Lead Engineer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <span class="eyebrow">About Nathnael</span>
+                        <h2 class="title">Engineering high-impact products with care.</h2>
+                        <p class="lead-text">
+                            I am a Full-Stack & Mobile Developer based in Addis Ababa and Adama, Ethiopia. Together with my partner at <strong>Bulbula</strong>, we build high-performing software that solves practical operational challenges for East African and international clients.
+                        </p>
+                        <p class="body-text">
+                            I specialize in responsive web architectures with Next.js, cross-platform mobile apps with Flutter, and robust API backends. I prefer lean teams, transparent pricing, and writing code that is clean enough for any engineer to inherit without headache.
+                        </p>
+
+                        <div class="profile-meta-grid">
+                            <div class="meta-item">
+                                <span class="meta-label">Location</span>
+                                <strong>Addis Ababa / Adama, Ethiopia</strong>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Studio</span>
+                                <strong><a href="https://bulbula.webcode.codes/" target="_blank" rel="noopener noreferrer" class="link-gold">Bulbula Software Solutions</a></strong>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Experience</span>
+                                <strong>2+ Years Professional Delivery</strong>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Direct Line</span>
+                                <strong>+251 919 933 640</strong>
+                            </div>
+                        </div>
+
+                        <div class="about-cta-row">
+                            <a href="#contact" class="btn btn-primary">Start a project</a>
+                            <a href="mailto:nathanelnigussie19@gmail.com" class="btn btn-secondary">
+                                <i class="fas fa-envelope"></i> Email directly
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-block">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Start a project</span>
+                    <h2 class="title">What can we build for you?</h2>
+                    <p class="subtitle">Tell me about your idea, timeline, and goals. You'll receive a detailed response within 24 hours.</p>
+                </div>
+
+                <div class="contact-card">
+                    <!-- Left Sidebar Info -->
+                    <div class="contact-info-pane">
+                        <div>
+                            <h3>Let's talk specs.</h3>
+                            <p class="info-blurb">
+                                Have an RFP, an MVP ready to design, or looking to augment your technical bandwidth? Let's connect directly.
+                            </p>
+                        </div>
+
+                        <div class="channel-list">
+                            <div class="channel-card">
+                                <span class="channel-icon"><i class="fas fa-envelope"></i></span>
+                                <div class="channel-meta">
+                                    <span class="channel-label">Direct Email</span>
+                                    <a href="mailto:nathanelnigussie19@gmail.com" class="channel-val">nathanelnigussie19@gmail.com</a>
+                                </div>
+                                <button type="button" class="copy-trigger" data-copy="nathanelnigussie19@gmail.com" title="Copy email">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="channel-card">
+                                <span class="channel-icon"><i class="fas fa-phone"></i></span>
+                                <div class="channel-meta">
+                                    <span class="channel-label">Phone & Telegram</span>
+                                    <a href="tel:+251919933640" class="channel-val">+251 919 933 640</a>
+                                </div>
+                                <button type="button" class="copy-trigger" data-copy="+251919933640" title="Copy phone">
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="channel-card">
+                                <span class="channel-icon"><i class="fas fa-building"></i></span>
+                                <div class="channel-meta">
+                                    <span class="channel-label">Studio Office</span>
+                                    <span class="channel-val">Canal Bld, 2nd Fl, 302 · Adama, Ethiopia</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links-block">
+                            <span class="social-heading">Connect Online</span>
+                            <div class="social-row">
+                                <a href="https://www.github.com/nathnael19" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://t.me/Nhttey" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                                <a href="https://www.instagram.com/nhttey19" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://bulbula.webcode.codes/" target="_blank" rel="noopener noreferrer" aria-label="Bulbula Studio"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Form Pane -->
+                    <div class="contact-form-pane">
+                        <form id="projectInquiryForm" action="https://formspree.io/f/xwpoqvgv" method="POST" novalidate>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label for="userName">Your Name <span class="req">*</span></label>
+                                    <input type="text" id="userName" name="name" placeholder="Abebe Bikila" required>
+                                    <span class="field-error" id="nameError"></span>
+                                </div>
+                                <div class="form-field">
+                                    <label for="userEmail">Email Address <span class="req">*</span></label>
+                                    <input type="email" id="userEmail" name="email" placeholder="abebe@example.com" required>
+                                    <span class="field-error" id="emailError"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="projectScope">What are you looking to build?</label>
+                                <select id="projectScope" name="scope">
+                                    <option value="Web Application">Web Application (React, Next.js, SaaS)</option>
+                                    <option value="Mobile App">Mobile App (Flutter, iOS & Android)</option>
+                                    <option value="Web & Mobile Suite">Web & Mobile Suite</option>
+                                    <option value="Marketing Website">Marketing Website / Landing Page</option>
+                                    <option value="Consulting / Other">Technical Consulting / Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="userSubject">Subject <span class="req">*</span></label>
+                                <input type="text" id="userSubject" name="subject" placeholder="New Project Inquiry" required>
+                                <span class="field-error" id="subjectError"></span>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="userMessage">Tell us about your project <span class="req">*</span></label>
+                                <textarea id="userMessage" name="message" rows="5" placeholder="Give a brief summary of what you are aiming to build, key features, and your ideal timeline..." required></textarea>
+                                <span class="field-error" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg btn-submit" id="submitInquiryBtn">
+                                <span class="btn-caption">Send Project Inquiry</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Studio Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Nathnael Nigussie. All Rights Reserved.</p>
-            <div class="back-to-top">
-                <a href="#home" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">Nathnael<span class="text-gold">.</span></span>
+                <p>Senior Full-Stack & Mobile Developer · Partner at <a href="https://bulbula.webcode.codes/" target="_blank" rel="noopener noreferrer" class="link-gold">Bulbula Software Solutions</a></p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 Nathnael Nigussie. Built to ship.</p>
+                <a href="#top" class="back-top-btn" aria-label="Scroll back to top" title="Back to top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
             </div>
         </div>
     </footer>
