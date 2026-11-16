@@ -125,50 +125,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const featureCheckboxes = document.querySelectorAll("#featuresGroup input[type='checkbox']");
     const paceButtons = document.querySelectorAll("#paceGroup .pace-btn");
 
-    const priceMinEl = document.getElementById("priceMin");
-    const priceMaxEl = document.getElementById("priceMax");
     const weeksMinEl = document.getElementById("weeksMin");
     const weeksMaxEl = document.getElementById("weeksMax");
     const useEstimateBtn = document.getElementById("useEstimateBtn");
 
     let selectedType = {
         name: "Web Application",
-        basePrice: 40000,
         days: 30,
     };
     let selectedFeatures = [];
     let selectedPace = {
         name: "Standard Timeline",
-        multiplier: 1.0,
         timeMultiplier: 1.0,
     };
 
     const calculateEstimate = () => {
-        let totalBase = selectedType.basePrice;
         let totalDays = selectedType.days;
 
         selectedFeatures = [];
         featureCheckboxes.forEach((cb) => {
             if (cb.checked) {
-                const price = Number(cb.getAttribute("data-price")) || 0;
                 const days = Number(cb.getAttribute("data-days")) || 0;
                 const infoTitle = cb.closest(".feature-checkbox")?.querySelector("strong")?.textContent || cb.value;
                 selectedFeatures.push(infoTitle);
-                totalBase += price;
                 totalDays += days;
             }
         });
-
-        const adjustedPrice = Math.round(totalBase * selectedPace.multiplier);
-        const minPrice = Math.round(adjustedPrice * 0.95);
-        const maxPrice = Math.round(adjustedPrice * 1.15);
 
         const adjustedDays = Math.max(10, Math.round(totalDays * selectedPace.timeMultiplier));
         const minWeeks = Math.max(2, Math.floor(adjustedDays / 7));
         const maxWeeks = minWeeks + 2;
 
-        if (priceMinEl) priceMinEl.textContent = minPrice.toLocaleString();
-        if (priceMaxEl) priceMaxEl.textContent = maxPrice.toLocaleString();
         if (weeksMinEl) weeksMinEl.textContent = String(minWeeks);
         if (weeksMaxEl) weeksMaxEl.textContent = String(maxWeeks);
     };
@@ -181,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             selectedType = {
                 name: card.querySelector("strong")?.textContent || "Web Application",
-                basePrice: Number(card.getAttribute("data-base")) || 40000,
                 days: Number(card.getAttribute("data-days")) || 30,
             };
             calculateEstimate();
@@ -201,7 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             selectedPace = {
                 name: btn.querySelector("strong")?.textContent || "Standard",
-                multiplier: Number(btn.getAttribute("data-multiplier")) || 1.0,
                 timeMultiplier: Number(btn.getAttribute("data-timemult")) || 1.0,
             };
             calculateEstimate();
@@ -229,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (subjectInput) {
-                subjectInput.value = `New Project Estimate: ${selectedType.name} (${priceMinEl.textContent} - ${priceMaxEl.textContent} Br)`;
+                subjectInput.value = `New Project Estimate: ${selectedType.name} (${weeksMinEl.textContent} - ${weeksMaxEl.textContent} weeks)`;
             }
 
             if (messageArea) {
@@ -239,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 Selected Scope: ${selectedType.name}
 Included Features: ${featText}
 Delivery Pace: ${selectedPace.name}
-Estimated Range: ${priceMinEl.textContent} — ${priceMaxEl.textContent} ETB (${weeksMinEl.textContent} - ${weeksMaxEl.textContent} weeks)
+Estimated Timeline: ${weeksMinEl.textContent} — ${weeksMaxEl.textContent} weeks
 
 Looking to discuss kickoff details...`;
             }

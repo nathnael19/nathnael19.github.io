@@ -989,16 +989,6 @@ body.light-mode .link-arrow {
     color: var(--color-fg-muted);
 }
 
-.feature-cost {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: var(--color-gold-400);
-}
-
-body.light-mode .feature-cost {
-    color: var(--color-gold-500);
-}
-
 .est-pace {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1065,14 +1055,6 @@ body.light-mode .feature-cost {
     color: var(--color-fg-subtle);
     display: block;
     margin-bottom: 8px;
-}
-
-.price-display {
-    font-family: var(--font-heading);
-    font-size: 2.1rem;
-    font-weight: 800;
-    color: var(--color-fg);
-    line-height: 1.15;
 }
 
 .price-separator {

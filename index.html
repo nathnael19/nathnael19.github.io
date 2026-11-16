@@ -377,8 +377,8 @@
             <div class="container">
                 <div class="section-heading">
                     <span class="eyebrow">Interactive Estimator</span>
-                    <h2 class="title">Estimate your project cost in seconds.</h2>
-                    <p class="subtitle">Select your scope, features, and target schedule for a transparent price range in Ethiopian Birr (ETB).</p>
+                    <h2 class="title">Estimate your project timeline in seconds.</h2>
+                    <p class="subtitle">Select your scope, features, and target schedule for a realistic delivery estimate.</p>
                 </div>
 
                 <div class="estimator-layout">
@@ -388,28 +388,28 @@
                         <div class="est-group">
                             <label class="est-label">1. Select Project Type</label>
                             <div class="est-cards" id="projectTypeGroup">
-                                <button type="button" class="est-card active" data-type="web" data-base="40000" data-days="30">
+                                <button type="button" class="est-card active" data-type="web" data-days="30">
                                     <div class="est-card-top">
                                         <i class="fas fa-globe"></i>
                                         <strong>Web Application</strong>
                                     </div>
                                     <span>SaaS, Dashboards, Custom Web Platforms</span>
                                 </button>
-                                <button type="button" class="est-card" data-type="mobile" data-base="50000" data-days="40">
+                                <button type="button" class="est-card" data-type="mobile" data-days="40">
                                     <div class="est-card-top">
                                         <i class="fas fa-mobile-screen"></i>
                                         <strong>Mobile App</strong>
                                     </div>
                                     <span>iOS & Android (Flutter / React Native)</span>
                                 </button>
-                                <button type="button" class="est-card" data-type="both" data-base="100000" data-days="60">
+                                <button type="button" class="est-card" data-type="both" data-days="60">
                                     <div class="est-card-top">
                                         <i class="fas fa-layer-group"></i>
                                         <strong>Web & Mobile Suite</strong>
                                     </div>
                                     <span>Unified codebase & shared backend</span>
                                 </button>
-                                <button type="button" class="est-card" data-type="website" data-base="30000" data-days="15">
+                                <button type="button" class="est-card" data-type="website" data-days="15">
                                     <div class="est-card-top">
                                         <i class="fas fa-desktop"></i>
                                         <strong>Marketing Website</strong>
@@ -424,44 +424,39 @@
                             <label class="est-label">2. Add Core Features</label>
                             <div class="est-features" id="featuresGroup">
                                 <label class="feature-checkbox">
-                                    <input type="checkbox" value="auth" data-price="12000" data-days="7">
+                                    <input type="checkbox" value="auth" data-days="7">
                                     <div class="feature-info">
                                         <strong>User Accounts & Roles</strong>
                                         <span>Secure signup, login, permission levels</span>
                                     </div>
-                                    <span class="feature-cost">+12,000 Br</span>
                                 </label>
                                 <label class="feature-checkbox">
-                                    <input type="checkbox" value="payments" data-price="9000" data-days="5">
+                                    <input type="checkbox" value="payments" data-days="5">
                                     <div class="feature-info">
                                         <strong>Payments & Telebirr / Stripe</strong>
                                         <span>Checkout, mobile wallets, invoices</span>
                                     </div>
-                                    <span class="feature-cost">+9,000 Br</span>
                                 </label>
                                 <label class="feature-checkbox">
-                                    <input type="checkbox" value="realtime" data-price="11000" data-days="10">
+                                    <input type="checkbox" value="realtime" data-days="10">
                                     <div class="feature-info">
                                         <strong>Real-Time Features</strong>
                                         <span>Live chat, alerts, collaborative sync</span>
                                     </div>
-                                    <span class="feature-cost">+11,000 Br</span>
                                 </label>
                                 <label class="feature-checkbox">
-                                    <input type="checkbox" value="cms" data-price="10000" data-days="5">
+                                    <input type="checkbox" value="cms" data-days="5">
                                     <div class="feature-info">
                                         <strong>Custom CMS & Content Portal</strong>
                                         <span>Admin publishing tools for blog and media</span>
                                     </div>
-                                    <span class="feature-cost">+10,000 Br</span>
                                 </label>
                                 <label class="feature-checkbox">
-                                    <input type="checkbox" value="admin" data-price="15000" data-days="8">
+                                    <input type="checkbox" value="admin" data-days="8">
                                     <div class="feature-info">
                                         <strong>Analytics & Admin Dashboard</strong>
                                         <span>Telemetry, user metrics, and control panel</span>
                                     </div>
-                                    <span class="feature-cost">+15,000 Br</span>
                                 </label>
                             </div>
                         </div>
@@ -470,32 +465,23 @@
                         <div class="est-group">
                             <label class="est-label">3. Timeline Pace</label>
                             <div class="est-pace" id="paceGroup">
-                                <button type="button" class="pace-btn active" data-pace="standard" data-multiplier="1" data-timemult="1">
+                                <button type="button" class="pace-btn active" data-pace="standard" data-timemult="1">
                                     <strong>Standard Timeline</strong>
                                     <span>Regular production sprint</span>
                                 </button>
-                                <button type="button" class="pace-btn" data-pace="rush" data-multiplier="1.3" data-timemult="0.75">
+                                <button type="button" class="pace-btn" data-pace="rush" data-timemult="0.75">
                                     <strong>Accelerated Delivery</strong>
                                     <span>Priority queueing & extra sprint hours</span>
                                 </button>
                             </div>
                         </div>
+
                     </div>
 
                     <!-- Summary Card -->
                     <div class="estimator-summary">
                         <div class="summary-box">
                             <div class="summary-section">
-                                <span class="summary-tag">Project Budget Range</span>
-                                <div class="price-display">
-                                    <span id="priceMin">40,000</span> Br
-                                    <span class="price-separator">—</span>
-                                    <span id="priceMax">48,000</span> Br
-                                </div>
-                                <span class="summary-note">ETB, estimated fixed price based on selections above.</span>
-                            </div>
-
-                            <div class="summary-section border-top">
                                 <span class="summary-tag">Estimated Delivery Timeline</span>
                                 <div class="time-display">
                                     <span id="weeksMin">4</span>
